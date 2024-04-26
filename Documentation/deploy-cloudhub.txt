@@ -1,0 +1,55 @@
+Business Group ID
+a41e7b82-f610-496e-8898-19374947af3a
+Client ID
+f25d3ad0983445a699ceef9b9ee26cfd
+Client Secret
+EF7cA31B14354cDea42A7C4d30833419  
+   
+ecom-deploy-mvn-client-app
+ClietnId: 23c7e68d140a4a9588511e7c3bc416bf
+ClietnSecret: 26EAFe4D5D764c9C96941cfb58e1255a
+
+mvn clean deploy -Dusername=kedarawasthi -Dpassword=Codex#3421 -s settings.xml
+      
+mvn clean deploy -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -s settings.xml
+
+mvn clean deploy  -DmuleDeploy -DtargetName=Cloudhub-US-East-2 -Denvironment=Sandbox -Dreplicas=1 -DvCores=0.1 -DappName=ecom-order-ext-eapi -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -Denv=dev -Dkey=1234567812345678 -Danypoint.clientId=f25d3ad0983445a699ceef9b9ee26cfd -Danypoint.clientSecret=EF7cA31B14354cDea42A7C4d30833419 -s settings.xml
+
+mvn clean deploy  -DmuleDeploy -Dregion=us-east-2 -Dworkers=1 -DworkerType=MICRO -Denvironment=Sandbox -DappName=ecom-order-ext-eapi -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -Denv=dev -Dkey=1234567812345678 -Danypoint.clientId=f25d3ad0983445a699ceef9b9ee26cfd -Danypoint.clientSecret=EF7cA31B14354cDea42A7C4d30833419 -s settings.xml
+
+======================================================Mule maven plugin cloudhub 2.0 conf =====================================================
+					<cloudhub2Deployment>
+				      <uri>https://anypoint.mulesoft.com</uri>
+				      <provider>MC</provider>
+				      <environment>${environment}</environment>
+				      <target>${targetName}</target>
+				      <muleVersion>${app.runtime}</muleVersion>
+				      <server>anypoint-exchange-v3</server>
+				      <applicationName>${appName}</applicationName>
+				      <replicas>${replicas}</replicas>
+				      <vCores>${vCores}</vCores>
+				      <properties>
+						 <env>${env}</env>
+					  </properties>
+					  <secureProperties>
+					  	 <anypoint.clientId>${anypoint.clientId}</anypoint.clientId>
+				      	 <anypoint.clientSecret>${anypoint.clientSecret}</anypoint.clientSecret>
+						 <key>${key}</key>
+					  </secureProperties>
+				      <deploymentSettings>
+				        <http>
+				          <inbound>
+				            <forwardSslSession>false</forwardSslSession>
+				            <lastMileSecurity>false</lastMileSecurity>
+				          </inbound>
+				        </http>
+				      </deploymentSettings>
+				      <integrations>
+					   <services>
+					    <objectStoreV2>
+					      <enabled>true</enabled>
+					    </objectStoreV2>
+					   </services>
+					  </integrations>
+				    </cloudhub2Deployment>
+===================================================

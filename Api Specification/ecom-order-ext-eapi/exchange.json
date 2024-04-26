@@ -1,0 +1,13 @@
+{
+  "main": "ecom-order-ext-eapi.raml",
+  "name": "ecom-order-ext-eapi",
+  "groupId": "a41e7b82-f610-496e-8898-19374947af3a",
+  "assetId": "ecom-order-ext-eapi",
+  "version": "1.0.0",
+  "classifier": "raml",
+  "tags": [],
+  "descriptorVersion": "1.0.0",
+  "organizationId": "a41e7b82-f610-496e-8898-19374947af3a",
+  "apiVersion": "v1",
+  "originalFormatVersion": "1.0"
+}

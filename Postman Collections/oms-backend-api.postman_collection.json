@@ -1,0 +1,1448 @@
+{
+	"info": {
+		"_postman_id": "4bc72925-9b9a-4ba0-8f21-81e44317005a",
+		"name": "oms-backend-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6866046",
+		"_collection_link": "https://bold-resonance-810977.postman.co/workspace/Deloitte~12d70320-e51a-42e6-a463-31c42d6c21df/collection/6866046-4bc72925-9b9a-4ba0-8f21-81e44317005a?action=share&source=collection_link&creator=6866046"
+	},
+	"item": [
+		{
+			"name": "health-check aws-ec2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234321",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com:8080/api/health-check",
+					"protocol": "http",
+					"host": [
+						"ec2-13-211-205-170",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-check"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Apr 2024 14:22:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "salesorder extended to customer service successfully"
+				}
+			]
+		},
+		{
+			"name": "health-check local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234321",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/health-check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health-check"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Apr 2024 14:22:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "salesorder extended to customer service successfully"
+				}
+			]
+		},
+		{
+			"name": "salesorder-to-customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Apr 2024 14:22:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "salesorder extended to customer service successfully"
+				}
+			]
+		},
+		{
+			"name": "salesorder-to-customer aws-ec2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234321",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-211-167-26.ap-southeast-2.compute.amazonaws.com:8080/api/customer",
+					"protocol": "http",
+					"host": [
+						"ec2-13-211-167-26",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Apr 2024 14:22:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "salesorder extended to customer service successfully"
+				}
+			]
+		},
+		{
+			"name": "salesorder-to-customer lambda serverless",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234321",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://igofhjxqo5.execute-api.ap-southeast-2.amazonaws.com/dev/api/customer",
+					"protocol": "https",
+					"host": [
+						"igofhjxqo5",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"BusinessUnitName\": \"1865_OCEAN\",\r\n   \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n   \"SourceTransactionSystem\": \"OPS\",\r\n   \"SourceTransactionId\": \"SDUS14\",\r\n   \"SourceTransactionNumber\": \"SDUS14\",\r\n   \"BuyingPartyName\": \"SOGETREL\",\r\n   \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n   \"CustomerPONumber\": \"TEST\",\r\n   \"TransactionalCurrencyCode\": \"EUR\",\r\n   \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n   \"PartialShipAllowedFlag\": true,\r\n   \"FreezePriceFlag\": false,\r\n   \"FreezeShippingChargeFlag\": false,\r\n   \"FreezeTaxFlag\": false,\r\n   \"SubmittedFlag\": true,\r\n   \"Salesperson\": \"Ahlem Yousfi\",\r\n   \"billToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\"\r\n      }\r\n   ],\r\n   \"shipToCustomer\": [\r\n      {\r\n         \"PartyName\": \"SOGETREL\" \r\n      }\r\n   ],\r\n   \"salesCredits\": [\r\n      {\r\n         \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n         \"SalesCreditTypeId\": \"1\",\r\n         \"Percent\": \"100\",\r\n         \"Salesperson\": \"Stephane Chaussat\"\r\n      }\r\n   ],\r\n   \"lines\": [\r\n      {\r\n         \"SourceTransactionLineNumber\": \"3\",\r\n         \"ProductNumber\": \"OCEE/FMA120\",\r\n         \"OrderedQuantity\": \"1\",\r\n         \"UnitSellingPrice\": \"122\",\r\n         \"RequestedShipDate\": \"2019-10-01\",\r\n         \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n         \"PartialShipAllowedFlag\": true,\r\n         \"SubstitutionAllowedFlag\": false,\r\n         \"TransactionCategoryCode\": \"ORDER\",\r\n         \"SourceScheduleNumber\": \"1\",\r\n         \"SourceTransactionLineId\": \"3\",\r\n         \"SourceTransactionScheduleId\": \"1\",\r\n         \"OrderedUOM\": \"Each\",\r\n         \"ExtendedAmount\": 122,\r\n         \"manualPriceAdjustments\": [\r\n            {\r\n               \"AdjustmentAmount\": \"122\",\r\n               \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n               \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n               \"SequenceNumber\": \"1\",\r\n               \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n               \"SourceManualPriceAdjustmentId\": \"1\",\r\n               \"ChargeRollupFlag\": false\r\n            }\r\n         ]\r\n      }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Apr 2024 14:22:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "salesorder extended to customer service successfully"
+				}
+			]
+		},
+		{
+			"name": "returnorder-to-item-ext",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"grp_id\": \"1234\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/item-ext",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"item-ext"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"grp_id\": \"1234\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/item-ext",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"item-ext"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:02:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "returnorder initiated to downstream systems successfully"
+				}
+			]
+		},
+		{
+			"name": "returnorder-to-item-ext aws ec2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"grp_id\": \"1234\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-238-155-94.ap-southeast-2.compute.amazonaws.com:8080/api/item-ext",
+					"protocol": "http",
+					"host": [
+						"ec2-13-238-155-94",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"item-ext"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"grp_id\": \"1234\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/item-ext",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"item-ext"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:02:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "returnorder initiated to downstream systems successfully"
+				}
+			]
+		},
+		{
+			"name": "returnorder-to-item-ext aws lambda serverless",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234321",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"grp_id\": \"1234\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://igofhjxqo5.execute-api.ap-southeast-2.amazonaws.com/dev/api/item-ext",
+					"protocol": "https",
+					"host": [
+						"igofhjxqo5",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"item-ext"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"grp_id\": \"1234\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/item-ext",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"item-ext"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:02:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "returnorder initiated to downstream systems successfully"
+				}
+			]
+		},
+		{
+			"name": "purchaseorder-to-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:03:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "purchaseorder sent to product inventory successfully"
+				}
+			]
+		},
+		{
+			"name": "purchaseorder-to-product aws ec2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-238-155-94.ap-southeast-2.compute.amazonaws.com:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"ec2-13-238-155-94",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:03:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "purchaseorder sent to product inventory successfully"
+				}
+			]
+		},
+		{
+			"name": "purchaseorder-to-product aws lambda serverless",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234321",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://igofhjxqo5.execute-api.ap-southeast-2.amazonaws.com/dev/api/product",
+					"protocol": "https",
+					"host": [
+						"igofhjxqo5",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:03:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "purchaseorder sent to product inventory successfully"
+				}
+			]
+		},
+		{
+			"name": "purchaseorder-to-shipping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/shipping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shipping"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shipping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shipping"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:03:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "purchaseorder sent to shipping service successfully"
+				}
+			]
+		},
+		{
+			"name": "purchaseorder-to-shipping aws ec2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-238-155-94.ap-southeast-2.compute.amazonaws.com:8080/api/shipping",
+					"protocol": "http",
+					"host": [
+						"ec2-13-238-155-94",
+						"ap-southeast-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shipping"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shipping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shipping"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:03:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "purchaseorder sent to shipping service successfully"
+				}
+			]
+		},
+		{
+			"name": "purchaseorder-to-shipping aws lambda serveless",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "1234321",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://igofhjxqo5.execute-api.ap-southeast-2.amazonaws.com:443/dev/api/shipping",
+					"protocol": "https",
+					"host": [
+						"igofhjxqo5",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"dev",
+						"api",
+						"shipping"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"template\": \"purchase_order\",\r\n        \"data\": {\r\n            \"po_number\": \"1742\",\r\n            \"po_date\": \"09/01/2020\",\r\n            \"company\": {\r\n                \"name\": \"360 Footwear\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@360footwear.co / 4444 555 555\",\r\n                \"website\": \"360footwear.co\"\r\n            },\r\n            \"vendor\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"Wholesale NY\",\r\n                \"address2\": \"57 Parkway, 5th Floor\",\r\n                \"address3\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"ship_to\": {\r\n                \"name\": \"Claire Simms\",\r\n                \"address1\": \"360 Footwear\",\r\n                \"address2\": \"787 Brunswick\",\r\n                \"address3\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"+1 4444-555-555\"\r\n            },\r\n            \"requested_by\": \"Claire Simms\",\r\n            \"ship_via\": \"FedEx\",\r\n            \"delivery_date\": \"09/01/2020\",\r\n            \"payment_terms\": \"Net 30 Days\",\r\n            \"lines\": [\r\n                {\r\n                    \"item\": \"Pursuit Running Shoes\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"59.50\",\r\n                    \"total\": \"595.00\"\r\n                },\r\n                {\r\n                    \"item\": \"Shelby Boots\",\r\n                    \"description\": \"Men's Shelby Leather Boots - 10/M\",\r\n                    \"quantity\": \"10\",\r\n                    \"unit_price\": \"39.50\",\r\n                    \"total\": \"395.00\"\r\n                }\r\n            ],\r\n            \"subtotal\": \"$990.00\",\r\n            \"sales_tax\": \"$59.40\",\r\n            \"sales_tax_percentage\": \"6%\",\r\n            \"shipping\": \"$37.88\",\r\n            \"other\": \"$0.00\",\r\n            \"total\": \"$1087.28\",\r\n            \"comments\": \"Payment terms 30 days.\",\r\n            \"color\": \"#000000\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shipping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shipping"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 19:03:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "purchaseorder sent to shipping service successfully"
+				}
+			]
+		}
+	]
+}

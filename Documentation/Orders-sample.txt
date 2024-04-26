@@ -1,0 +1,173 @@
+Order:
+
+
+Salesorder:
+A sales order is a commercial document prepared by a seller and issued to a customer. 
+It confirms the sale of goods or services and details the sale's specifics, 
+including the quantity, pricing, and quality of goods or services provided.
+{
+   "BusinessUnitName": "1865_OCEAN",
+   "RequestingBusinessUnitName": "1865_OCEAN",
+   "SourceTransactionSystem": "OPS",
+   "SourceTransactionId": "SDUS14",
+   "SourceTransactionNumber": "SDUS14",
+   "BuyingPartyName": "SOGETREL",
+   "TransactionTypeCode": "CAPEX_NO_PROJECT",
+   "CustomerPONumber": "TEST",
+   "TransactionalCurrencyCode": "EUR",
+   "RequestingLegalEntity": "Orange Business Services SA",
+   "PartialShipAllowedFlag": true,
+   "FreezePriceFlag": false,
+   "FreezeShippingChargeFlag": false,
+   "FreezeTaxFlag": false,
+   "SubmittedFlag": true,
+   "Salesperson": "Ahlem Yousfi",
+   "billToCustomer": [
+      {
+         "PartyName": "SOGETREL"
+      }
+   ],
+   "shipToCustomer": [
+      {
+         "PartyName": "SOGETREL" 
+      }
+   ],
+   "salesCredits": [
+      {
+         "SourceTransactionSalesCreditIdentifier": "1",
+         "SalesCreditTypeId": "1",
+         "Percent": "100",
+         "Salesperson": "Stephane Chaussat"
+      }
+   ],
+   "lines": [
+      {
+         "SourceTransactionLineNumber": "3",
+         "ProductNumber": "OCEE/FMA120",
+         "OrderedQuantity": "1",
+         "UnitSellingPrice": "122",
+         "RequestedShipDate": "2019-10-01",
+         "RequestedFulfillmentOrganizationCode": "OCE_AIX",
+         "PartialShipAllowedFlag": true,
+         "SubstitutionAllowedFlag": false,
+         "TransactionCategoryCode": "ORDER",
+         "SourceScheduleNumber": "1",
+         "SourceTransactionLineId": "3",
+         "SourceTransactionScheduleId": "1",
+         "OrderedUOM": "Each",
+         "ExtendedAmount": 122,
+         "manualPriceAdjustments": [
+            {
+               "AdjustmentAmount": "122",
+               "AdjustmentTypeCode": "PRICE_OVERRIDE",
+               "ReasonCode": "ORA_SALES_NEGOTIATION",
+               "SequenceNumber": "1",
+               "ChargeDefinitionCode": "QP_SALE_PRICE",
+               "SourceManualPriceAdjustmentId": "1",
+               "ChargeRollupFlag": false
+            }
+         ]
+      }
+   ]
+}
+
+
+
+
+PurchaseOrder:
+{
+    "template": "purchase_order",
+    "data": {
+        "po_number": "1742",
+        "po_date": "09/01/2020",
+        "company": {
+            "name": "360 Footwear",
+            "address": "787 Brunswick, Los Angeles, CA 50028",
+            "contact": "support@360footwear.co / 4444 555 555",
+            "website": "360footwear.co"
+        },
+        "vendor": {
+            "name": "Casey Williams",
+            "address1": "Wholesale NY",
+            "address2": "57 Parkway, 5th Floor",
+            "address3": "New York, NY 10013",
+            "telephone": "+1 212-608-5983"
+        },
+        "ship_to": {
+            "name": "Claire Simms",
+            "address1": "360 Footwear",
+            "address2": "787 Brunswick",
+            "address3": "Los Angeles, CA 50028",
+            "telephone": "+1 4444-555-555"
+        },
+        "requested_by": "Claire Simms",
+        "ship_via": "FedEx",
+        "delivery_date": "09/01/2020",
+        "payment_terms": "Net 30 Days",
+        "lines": [
+            {
+                "item": "Pursuit Running Shoes",
+                "description": "Men's Pursuit Running Shoes - 10/M",
+                "quantity": "10",
+                "unit_price": "59.50",
+                "total": "595.00"
+            },
+            {
+                "item": "Shelby Boots",
+                "description": "Men's Shelby Leather Boots - 10/M",
+                "quantity": "10",
+                "unit_price": "39.50",
+                "total": "395.00"
+            }
+        ],
+        "subtotal": "$990.00",
+        "sales_tax": "$59.40",
+        "sales_tax_percentage": "6%",
+        "shipping": "$37.88",
+        "other": "$0.00",
+        "total": "$1087.28",
+        "comments": "Payment terms 30 days.",
+        "color": "#000000"
+    }
+}
+
+
+ReturnOrder:
+{
+    "template": "returns_form",
+    "data": {
+        "order_number": "1893",
+        "order_date": "02/29/2024",
+        "return_from": {
+            "name": "Casey Williams",
+            "address1": "57 Parkway, 5th Floor",
+            "address2": "New York, NY 10013",
+            "telephone": "+1 212-608-5983"
+        },
+        "return_to": {
+            "name": "Acme Returns",
+            "address1": "787 Brunswick",
+            "address2": "Los Angeles, CA 50028",
+            "telephone": "4444 555 555"
+        },
+        "items": [
+            {
+                "image": "https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg",
+                "description": "Men's Pursuit Running Shoes - 10/M - BLACK",
+                "sku": "PRS3000011-AH",
+                "barcode": 3000011303023329,
+                "quantity": 2
+            }
+        ],
+        "message_title": "Thanks for your business!",
+        "message_body": "Please complete the above form and return it with the items carefully packed.",
+        "company": {
+            "name": "Acme",
+            "address": "787 Brunswick, Los Angeles, CA 50028",
+            "contact": "support@acme.com / 4444 555 555",
+            "website": "acme.com",
+            "vat_number": "103472324283"
+        },
+        "barcode": 1893
+    }
+}
