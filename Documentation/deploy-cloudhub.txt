@@ -1,3 +1,43 @@
+Environment
+Environment name:
+
+Environment ID:
+
+Sandbox
+
+e454d52e-391e-4a52-a088-2e04a1337e36
+
+Client credentials
+Client ID:
+
+Client secret:
+
+f3c1d78dbe504863b4e4c73b96f3eac7
+
+7633383955B941f29b3eD2f16Bae7305
+Hide
+Business Group
+Business Group name:
+
+Business Group ID:
+
+Deloitte India Llp
+
+a41e7b82-f610-496e-8898-19374947af3a
+
+Client credentials
+Client ID:
+
+Client secret:
+
+f25d3ad0983445a699ceef9b9ee26cfd
+
+EF7cA31B14354cDea42A7C4d30833419
+
+
+
+
+
 Business Group ID
 a41e7b82-f610-496e-8898-19374947af3a
 Client ID
@@ -13,10 +53,9 @@ mvn clean deploy -Dusername=kedarawasthi -Dpassword=Codex#3421 -s settings.xml
       
 mvn clean deploy -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -s settings.xml
 
-mvn clean deploy  -DmuleDeploy -DtargetName=Cloudhub-US-East-2 -Denvironment=Sandbox -Dreplicas=1 -DvCores=0.1 -DappName=ecom-order-ext-eapi -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -Denv=dev -Dkey=1234567812345678 -Danypoint.clientId=f25d3ad0983445a699ceef9b9ee26cfd -Danypoint.clientSecret=EF7cA31B14354cDea42A7C4d30833419 -s settings.xml
+mvn clean deploy  -DmuleDeploy -DtargetName=Cloudhub-US-East-2 -Denvironment=Sandbox -Dreplicas=1 -DvCores=0.1 -DappName=ecom-order-ext-eapi -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -Denv=dev -Dkey=1234567812345678 -Danypoint.platform.client_id=f3c1d78dbe504863b4e4c73b96f3eac7 -Danypoint.platform.client_secret=7633383955B941f29b3eD2f16Bae7305 -s settings.xml
 
-mvn clean deploy  -DmuleDeploy -Dregion=us-east-2 -Dworkers=1 -DworkerType=MICRO -Denvironment=Sandbox -DappName=ecom-order-ext-eapi -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -Denv=dev -Dkey=1234567812345678 -Danypoint.clientId=f25d3ad0983445a699ceef9b9ee26cfd -Danypoint.clientSecret=EF7cA31B14354cDea42A7C4d30833419 -s settings.xml
-
+mvn clean deploy  -DmuleDeploy -Dregion=us-east-2 -Dworkers=1 -DworkerType=MICRO -Denvironment=Sandbox -DappName=ecom-order-ext-eapi -DclientID=23c7e68d140a4a9588511e7c3bc416bf -DclientSecret=26EAFe4D5D764c9C96941cfb58e1255a -Denv=dev -Dkey=1234567812345678 -Danypoint.platform.client_id=f3c1d78dbe504863b4e4c73b96f3eac7 -Danypoint.platform.client_secret=7633383955B941f29b3eD2f16Bae7305 -s settings.xml
 ======================================================Mule maven plugin cloudhub 2.0 conf =====================================================
 					<cloudhub2Deployment>
 				      <uri>https://anypoint.mulesoft.com</uri>

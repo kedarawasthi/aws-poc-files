@@ -1157,7 +1157,7 @@
 				"header": [
 					{
 						"key": "ec2host",
-						"value": "1234ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com",
+						"value": "{{ec2host}}",
 						"type": "text"
 					}
 				],
@@ -1259,13 +1259,13 @@
 				"header": [
 					{
 						"key": "ec2host",
-						"value": "ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com",
+						"value": "{{ec2host}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": {\r\n        \"grp_id\": \"12769233254\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }\r\n}",
+					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": {\r\n        \"grp_id\": \"3210\",\r\n        \"template\": \"template_form\",\r\n        \"data\": {\r\n            \"order_number\": \"3435\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1348,7 +1348,7 @@
 				"header": [
 					{
 						"key": "ec2host",
-						"value": "ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com",
+						"value": "{{ec2host}}",
 						"type": "text"
 					}
 				],
@@ -1437,13 +1437,13 @@
 				"header": [
 					{
 						"key": "ec2host",
-						"value": "ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com",
+						"value": "{{ec2host}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": [\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1893\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1897\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1236\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1893\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1236\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"18945\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": [\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"18838\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"18879\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1236\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"18836\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1236\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"189845\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1526,7 +1526,7 @@
 				"header": [
 					{
 						"key": "ec2host",
-						"value": "ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com",
+						"value": "{{ec2host}}",
 						"type": "text"
 					}
 				],
@@ -1967,7 +1967,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/purchaseorder-shipping-queue\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-dlq.fifo\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -2923,7 +2923,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://ecom-order-ext-eapi.us-e2.cloudhub.io/ecom-order-ext-eapi/v1/reprocess/salesorder-customer?maxNoOfMessagesToRedrive=10&strategy=mule-lambda",
+					"raw": "http://ecom-order-ext-eapi.us-e2.cloudhub.io/ecom-order-ext-eapi/v1/reprocess/salesorder-customer?maxNoOfMessagesToRedrive=10&strategy=mule-java",
 					"protocol": "http",
 					"host": [
 						"ecom-order-ext-eapi",
@@ -2944,7 +2944,7 @@
 						},
 						{
 							"key": "strategy",
-							"value": "mule-lambda"
+							"value": "mule-java"
 						}
 					]
 				}
@@ -3463,6 +3463,60 @@
 					"body": "{\n    \"status\": 200,\n    \"message\": [\n        {\n            \"purchaseorder-shipping\": {\n                \"sendMessageBatchResult\": {\n                    \"successful\": [\n                        \"298caae3-8ff4-421e-a385-a195c73db780\",\n                        \"626f84ed-7196-4008-804a-e73c23e4c5c5\",\n                        \"146b0969-53fb-479d-8e86-95badb16b21d\"\n                    ],\n                    \"failed\": []\n                },\n                \"deleteMessageBatchResult\": {\n                    \"failed\": [],\n                    \"successful\": [\n                        \"298caae3-8ff4-421e-a385-a195c73db780\",\n                        \"626f84ed-7196-4008-804a-e73c23e4c5c5\",\n                        \"146b0969-53fb-479d-8e86-95badb16b21d\"\n                    ]\n                }\n            }\n        },\n        {\n            \"purchaseorder-product\": {\n                \"sendMessageBatchResult\": {\n                    \"successful\": [\n                        \"52390d21-7302-48ee-974a-24605ab42d6a\",\n                        \"1ba8c0d6-6ea6-41e1-b84c-aae049c03366\"\n                    ],\n                    \"failed\": []\n                },\n                \"deleteMessageBatchResult\": {\n                    \"failed\": [],\n                    \"successful\": [\n                        \"52390d21-7302-48ee-974a-24605ab42d6a\",\n                        \"1ba8c0d6-6ea6-41e1-b84c-aae049c03366\"\n                    ]\n                }\n            }\n        }\n    ]\n}"
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{client_id}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "123",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "123",
+			"type": "string"
+		},
+		{
+			"key": "ec2host",
+			"value": "ec2-54-66-58-21.ap-southeast-2.compute.amazonaws.com",
+			"type": "string"
 		}
 	]
 }

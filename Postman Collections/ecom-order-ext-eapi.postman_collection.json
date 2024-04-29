@@ -8,81 +8,6 @@
 	},
 	"item": [
 		{
-			"name": "health check",
-			"protocolProfileBehavior": {
-				"strictSSL": false
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://ecom-order-ext-eapi.us-e2.cloudhub.io/ecom-order-ext-eapi/v1/health-check",
-					"protocol": "http",
-					"host": [
-						"ecom-order-ext-eapi",
-						"us-e2",
-						"cloudhub",
-						"io"
-					],
-					"path": [
-						"ecom-order-ext-eapi",
-						"v1",
-						"health-check"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "response",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"Queue\": {\r\n        \"queueName\": \"dummy-queue.fifo\"\r\n    },\r\n    \"Attributes\": {\r\n        \"DelaySeconds\": 0,\r\n        \"MaximumMessageSize\":262144,\r\n        \"MessageRetentionPeriod\": 345600,\r\n        \"ReceiveMessageWaitTimeSeconds\": 0,\r\n        \"VisibilityTimeout\": 30,\r\n        \"FifoQueue\": true,\r\n        \"ContentBasedDeduplication\": true,\r\n        \"DeduplicationScope\": \"messageGroup\" ,\r\n        \"FifoThroughputLimit\": \"perMessageGroupId\"\r\n    }\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8081/ecom-order-ext-eapi/v1/create-queue",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8081",
-							"path": [
-								"ecom-order-ext-eapi",
-								"v1",
-								"create-queue"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=UTF-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "72"
-						},
-						{
-							"key": "Date",
-							"value": "Sat, 06 Apr 2024 17:54:37 GMT"
-						}
-					],
-					"cookie": [],
-					"body": "\"https://sqs.ap-southeast-2.amazonaws.com/590183942957/dummy-queue.fifo\""
-				}
-			]
-		},
-		{
 			"name": "health check local",
 			"request": {
 				"method": "GET",
@@ -1303,108 +1228,6 @@
 			]
 		},
 		{
-			"name": "send-message-so cloudhub",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "ec2host",
-						"value": "1234ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/salesorder-customer-queue\"\r\n    },\r\n    \"Message\": {\r\n        \"BusinessUnitName\": \"\",\r\n        \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n        \"SourceTransactionSystem\": \"OPS\",\r\n        \"SourceTransactionId\": \"SDUS14\",\r\n        \"SourceTransactionNumber\": \"SDUS14\",\r\n        \"BuyingPartyName\": \"SOGETREL\",\r\n        \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n        \"CustomerPONumber\": \"TEST\",\r\n        \"TransactionalCurrencyCode\": \"EUR\",\r\n        \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n        \"PartialShipAllowedFlag\": true,\r\n        \"FreezePriceFlag\": false,\r\n        \"FreezeShippingChargeFlag\": false,\r\n        \"FreezeTaxFlag\": false,\r\n        \"SubmittedFlag\": true,\r\n        \"Salesperson\": \"Ahlem Yousfi\",\r\n        \"billToCustomer\": [\r\n            {\r\n                \"PartyName\": \"SOGETREL\"\r\n            }\r\n        ],\r\n        \"shipToCustomer\": [\r\n            {\r\n                \"PartyName\": \"SOGETREL\"\r\n            }\r\n        ],\r\n        \"salesCredits\": [\r\n            {\r\n                \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n                \"SalesCreditTypeId\": \"1\",\r\n                \"Percent\": \"100\",\r\n                \"Salesperson\": \"Stephane Chaussat\"\r\n            }\r\n        ],\r\n        \"lines\": [\r\n            {\r\n                \"SourceTransactionLineNumber\": \"3\",\r\n                \"ProductNumber\": \"OCEE/FMA120\",\r\n                \"OrderedQuantity\": \"1\",\r\n                \"UnitSellingPrice\": \"122\",\r\n                \"RequestedShipDate\": \"2019-10-01\",\r\n                \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n                \"PartialShipAllowedFlag\": true,\r\n                \"SubstitutionAllowedFlag\": false,\r\n                \"TransactionCategoryCode\": \"ORDER\",\r\n                \"SourceScheduleNumber\": \"1\",\r\n                \"SourceTransactionLineId\": \"3\",\r\n                \"SourceTransactionScheduleId\": \"1\",\r\n                \"OrderedUOM\": \"Each\",\r\n                \"ExtendedAmount\": 122,\r\n                \"manualPriceAdjustments\": [\r\n                    {\r\n                        \"AdjustmentAmount\": \"122\",\r\n                        \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n                        \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n                        \"SequenceNumber\": \"1\",\r\n                        \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n                        \"SourceManualPriceAdjustmentId\": \"1\",\r\n                        \"ChargeRollupFlag\": false\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://ecom-order-ext-eapi.us-e2.cloudhub.io/ecom-order-ext-eapi/v1/send-message/salesorder",
-					"protocol": "http",
-					"host": [
-						"ecom-order-ext-eapi",
-						"us-e2",
-						"cloudhub",
-						"io"
-					],
-					"path": [
-						"ecom-order-ext-eapi",
-						"v1",
-						"send-message",
-						"salesorder"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "response",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "x-correlation-id",
-								"value": "1234",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "x-message-type",
-								"value": "salesorder",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/590183942957/salesorder-customer-queue\"\r\n    },\r\n    \"Message\": {\r\n        \"BusinessUnitName\": \"1865_OCEAN\",\r\n        \"RequestingBusinessUnitName\": \"1865_OCEAN\",\r\n        \"SourceTransactionSystem\": \"OPS\",\r\n        \"SourceTransactionId\": \"SDUS14\",\r\n        \"SourceTransactionNumber\": \"SDUS14\",\r\n        \"BuyingPartyName\": \"SOGETREL\",\r\n        \"TransactionTypeCode\": \"CAPEX_NO_PROJECT\",\r\n        \"CustomerPONumber\": \"TEST\",\r\n        \"TransactionalCurrencyCode\": \"EUR\",\r\n        \"RequestingLegalEntity\": \"Orange Business Services SA\",\r\n        \"PartialShipAllowedFlag\": true,\r\n        \"FreezePriceFlag\": false,\r\n        \"FreezeShippingChargeFlag\": false,\r\n        \"FreezeTaxFlag\": false,\r\n        \"SubmittedFlag\": true,\r\n        \"Salesperson\": \"Ahlem Yousfi\",\r\n        \"billToCustomer\": [\r\n            {\r\n                \"PartyName\": \"SOGETREL\"\r\n            }\r\n        ],\r\n        \"shipToCustomer\": [\r\n            {\r\n                \"PartyName\": \"SOGETREL\"\r\n            }\r\n        ],\r\n        \"salesCredits\": [\r\n            {\r\n                \"SourceTransactionSalesCreditIdentifier\": \"1\",\r\n                \"SalesCreditTypeId\": \"1\",\r\n                \"Percent\": \"100\",\r\n                \"Salesperson\": \"Stephane Chaussat\"\r\n            }\r\n        ],\r\n        \"lines\": [\r\n            {\r\n                \"SourceTransactionLineNumber\": \"3\",\r\n                \"ProductNumber\": \"OCEE/FMA120\",\r\n                \"OrderedQuantity\": \"1\",\r\n                \"UnitSellingPrice\": \"122\",\r\n                \"RequestedShipDate\": \"2019-10-01\",\r\n                \"RequestedFulfillmentOrganizationCode\": \"OCE_AIX\",\r\n                \"PartialShipAllowedFlag\": true,\r\n                \"SubstitutionAllowedFlag\": false,\r\n                \"TransactionCategoryCode\": \"ORDER\",\r\n                \"SourceScheduleNumber\": \"1\",\r\n                \"SourceTransactionLineId\": \"3\",\r\n                \"SourceTransactionScheduleId\": \"1\",\r\n                \"OrderedUOM\": \"Each\",\r\n                \"ExtendedAmount\": 122,\r\n                \"manualPriceAdjustments\": [\r\n                    {\r\n                        \"AdjustmentAmount\": \"122\",\r\n                        \"AdjustmentTypeCode\": \"PRICE_OVERRIDE\",\r\n                        \"ReasonCode\": \"ORA_SALES_NEGOTIATION\",\r\n                        \"SequenceNumber\": \"1\",\r\n                        \"ChargeDefinitionCode\": \"QP_SALE_PRICE\",\r\n                        \"SourceManualPriceAdjustmentId\": \"1\",\r\n                        \"ChargeRollupFlag\": false\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8081/ecom-order-ext-eapi/v1/send-message/salesorder",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8081",
-							"path": [
-								"ecom-order-ext-eapi",
-								"v1",
-								"send-message",
-								"salesorder"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=UTF-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "179"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 19 Apr 2024 17:51:33 GMT"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"messageId\": \"789902f8-9493-4951-9fa1-ae94c9cddef8\",\n    \"MD5OfMessageBody\": \"7a37038b48875758ff20ae04152d2853\",\n    \"MD5OfMessageAttributes\": \"99557c4929bae7cf5ec654df05b61b21\"\n}"
-				}
-			]
-		},
-		{
 			"name": "send-message-ro",
 			"request": {
 				"method": "POST",
@@ -1417,7 +1240,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": {\r\n        \"grp_id\": \"12769233254\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }\r\n}",
+					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": {\r\n        \"grp_id\": \"123\",\r\n        \"template\": \"returns_form\",\r\n        \"data\": {\r\n            \"order_number\": \"1893\",\r\n            \"order_date\": \"02/29/2024\",\r\n            \"return_from\": {\r\n                \"name\": \"Casey Williams\",\r\n                \"address1\": \"57 Parkway, 5th Floor\",\r\n                \"address2\": \"New York, NY 10013\",\r\n                \"telephone\": \"+1 212-608-5983\"\r\n            },\r\n            \"return_to\": {\r\n                \"name\": \"Acme Returns\",\r\n                \"address1\": \"787 Brunswick\",\r\n                \"address2\": \"Los Angeles, CA 50028\",\r\n                \"telephone\": \"4444 555 555\"\r\n            },\r\n            \"items\": [\r\n                {\r\n                    \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                    \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                    \"sku\": \"PRS3000011-AH\",\r\n                    \"barcode\": 3000011303023329,\r\n                    \"quantity\": 2\r\n                }\r\n            ],\r\n            \"message_title\": \"Thanks for your business!\",\r\n            \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n            \"company\": {\r\n                \"name\": \"Acme\",\r\n                \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                \"contact\": \"support@acme.com / 4444 555 555\",\r\n                \"website\": \"acme.com\",\r\n                \"vat_number\": \"103472324283\"\r\n            },\r\n            \"barcode\": 1893\r\n        }\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1498,7 +1321,7 @@
 				"header": [
 					{
 						"key": "ec2host",
-						"value": "ec2-13-211-205-170.ap-southeast-2.compute.amazonaws.com",
+						"value": "ec2-3-27-170-33.ap-southeast-2.compute.amazonaws.com",
 						"type": "text"
 					}
 				],
@@ -1591,7 +1414,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": [\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1893\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1897\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1236\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1893\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1236\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"18945\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"Queue\": {\r\n        \"queueUrl\": \"https://sqs.ap-southeast-2.amazonaws.com/891376909160/returnorder-item-ext-queue.fifo\"\r\n    },\r\n    \"Message\": [\r\n        {\r\n            \"grp_id\": \"1234\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1894\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1234\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1895\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"18943\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        },\r\n        {\r\n            \"grp_id\": \"1235\",\r\n            \"template\": \"returns_form\",\r\n            \"data\": {\r\n                \"order_number\": \"1894435\",\r\n                \"order_date\": \"02/29/2024\",\r\n                \"return_from\": {\r\n                    \"name\": \"Casey Williams\",\r\n                    \"address1\": \"57 Parkway, 5th Floor\",\r\n                    \"address2\": \"New York, NY 10013\",\r\n                    \"telephone\": \"+1 212-608-5983\"\r\n                },\r\n                \"return_to\": {\r\n                    \"name\": \"Acme Returns\",\r\n                    \"address1\": \"787 Brunswick\",\r\n                    \"address2\": \"Los Angeles, CA 50028\",\r\n                    \"telephone\": \"4444 555 555\"\r\n                },\r\n                \"items\": [\r\n                    {\r\n                        \"image\": \"https://docamatic.s3-eu-west-1.amazonaws.com/assets/shoe.jpg\",\r\n                        \"description\": \"Men's Pursuit Running Shoes - 10/M - BLACK\",\r\n                        \"sku\": \"PRS3000011-AH\",\r\n                        \"barcode\": 3000011303023329,\r\n                        \"quantity\": 2\r\n                    }\r\n                ],\r\n                \"message_title\": \"Thanks for your business!\",\r\n                \"message_body\": \"Please complete the above form and return it with the items carefully packed.\",\r\n                \"company\": {\r\n                    \"name\": \"Acme\",\r\n                    \"address\": \"787 Brunswick, Los Angeles, CA 50028\",\r\n                    \"contact\": \"support@acme.com / 4444 555 555\",\r\n                    \"website\": \"acme.com\",\r\n                    \"vat_number\": \"103472324283\"\r\n                },\r\n                \"barcode\": 1893\r\n            }\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -4204,6 +4027,45 @@
 					"body": "{\n    \"status\": 200,\n    \"message\": [\n        {\n            \"purchaseorder-shipping\": {\n                \"sendMessageBatchResult\": {\n                    \"successful\": [\n                        \"298caae3-8ff4-421e-a385-a195c73db780\",\n                        \"626f84ed-7196-4008-804a-e73c23e4c5c5\",\n                        \"146b0969-53fb-479d-8e86-95badb16b21d\"\n                    ],\n                    \"failed\": []\n                },\n                \"deleteMessageBatchResult\": {\n                    \"failed\": [],\n                    \"successful\": [\n                        \"298caae3-8ff4-421e-a385-a195c73db780\",\n                        \"626f84ed-7196-4008-804a-e73c23e4c5c5\",\n                        \"146b0969-53fb-479d-8e86-95badb16b21d\"\n                    ]\n                }\n            }\n        },\n        {\n            \"purchaseorder-product\": {\n                \"sendMessageBatchResult\": {\n                    \"successful\": [\n                        \"52390d21-7302-48ee-974a-24605ab42d6a\",\n                        \"1ba8c0d6-6ea6-41e1-b84c-aae049c03366\"\n                    ],\n                    \"failed\": []\n                },\n                \"deleteMessageBatchResult\": {\n                    \"failed\": [],\n                    \"successful\": [\n                        \"52390d21-7302-48ee-974a-24605ab42d6a\",\n                        \"1ba8c0d6-6ea6-41e1-b84c-aae049c03366\"\n                    ]\n                }\n            }\n        }\n    ]\n}"
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "123",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "123",
+			"type": "string"
+		},
+		{
+			"key": "ec2host",
+			"value": "ec2-13-211-167-26.ap-southeast-2.compute.amazonaws.com",
+			"type": "string"
 		}
 	]
 }
